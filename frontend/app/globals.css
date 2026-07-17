@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f5f1e8;
+  --ink: #122620;
+  --ember: #d96f32;
+  --moss: #2f5d50;
+  --sand: #d7c6a1;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(217, 111, 50, 0.28), transparent 33%),
+    radial-gradient(circle at 87% 10%, rgba(47, 93, 80, 0.24), transparent 35%),
+    linear-gradient(180deg, #f8f4ec 0%, #efe4cd 100%);
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.research-grid {
+  background-image:
+    linear-gradient(to right, rgba(18, 38, 32, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 38, 32, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
