@@ -11,7 +11,7 @@ export default function UploadPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ember">Document Upload</p>
             <h1 className="mt-2 text-3xl font-bold">Bring papers into ResearchMind</h1>
             <p className="mt-2 text-sm text-ink/80">
-              In the next step this page will upload PDFs to backend ingestion and persist metadata.
+              Upload now sends PDFs to backend ingestion and returns a trackable document ID.
             </p>
           </header>
           <UploadDropzone />

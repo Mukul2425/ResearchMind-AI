@@ -13,11 +13,16 @@ Each commit is scoped to one milestone.
 - Core API routes for health, upload, and chat
 - Initial RAG service placeholders
 
-### Step 2 (current)
+### Step 2
 - Runnable Next.js frontend shell
 - Dashboard with backend health status indicator
 - Upload, library, chat, and compare page skeletons
 - Styled component foundation with Tailwind and Framer Motion
+
+### Step 3 (current)
+- Upload page connected to backend /api/documents/upload
+- PDF file validation and upload state handling
+- Success/error feedback with returned document ID
 
 ## Repository structure
 
@@ -27,4 +32,4 @@ Each commit is scoped to one milestone.
 
 ## Next step
 
-Step 3 will connect the upload page to backend ingestion and implement real PDF parsing/chunking pipeline modules.
+Step 4 will implement backend section-aware PDF parsing and semantic chunking modules.
