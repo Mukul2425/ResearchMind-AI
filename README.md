@@ -34,10 +34,15 @@ Each commit is scoped to one milestone.
 - Grounded chat responses with citations from processed documents
 - Fallback response when no relevant context is available
 
-### Step 6 (current)
+### Step 6
 - Qdrant-backed vector storage for chunk embeddings
 - Similarity search retrieval with local fallback behavior
 - Ingestion pipeline now writes parsed chunks into the vector index
+
+### Step 7 (current)
+- Retrieval reranking that combines vector similarity and lexical overlap
+- Improved top-k ordering for grounded chat answers
+- Better ranking metadata for future evaluation work
 
 ## Repository structure
 
@@ -47,4 +52,4 @@ Each commit is scoped to one milestone.
 
 ## Next step
 
-Step 7 will add reranking and a retrieval evaluation harness.
+Step 8 will add a retrieval evaluation harness and a debugging API for chunk inspection.
