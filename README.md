@@ -24,10 +24,15 @@ Each commit is scoped to one milestone.
 - PDF file validation and upload state handling
 - Success/error feedback with returned document ID
 
-### Step 4 (current)
+### Step 4
 - Section-aware PDF parsing with heading detection heuristics
 - Semantic chunking pipeline with overlap and section metadata
 - Ingestion service wired to parse and chunk uploaded documents
+
+### Step 5 (current)
+- In-memory retrieval over stored chunks
+- Grounded chat responses with citations from processed documents
+- Fallback response when no relevant context is available
 
 ## Repository structure
 
@@ -37,4 +42,4 @@ Each commit is scoped to one milestone.
 
 ## Next step
 
-Step 5 will store chunks in Qdrant and wire retrieval to answer grounded chat queries.
+Step 6 will store chunks in Qdrant and add true vector search + reranking.

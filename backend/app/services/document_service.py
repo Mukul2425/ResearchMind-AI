@@ -26,5 +26,11 @@ class DocumentService:
     def get_chunks(self, document_id: str) -> list[DocumentChunk]:
         return self._chunks_by_document.get(document_id, [])
 
+    def iter_all_chunks(self) -> list[list[DocumentChunk]]:
+        return list(self._chunks_by_document.values())
+
+    def get_parsed_document(self, document_id: str) -> dict:
+        return self._parsed_by_document.get(document_id, {})
+
 
 document_service = DocumentService()
