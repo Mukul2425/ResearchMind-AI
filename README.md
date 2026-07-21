@@ -19,10 +19,15 @@ Each commit is scoped to one milestone.
 - Upload, library, chat, and compare page skeletons
 - Styled component foundation with Tailwind and Framer Motion
 
-### Step 3 (current)
+### Step 3
 - Upload page connected to backend /api/documents/upload
 - PDF file validation and upload state handling
 - Success/error feedback with returned document ID
+
+### Step 4 (current)
+- Section-aware PDF parsing with heading detection heuristics
+- Semantic chunking pipeline with overlap and section metadata
+- Ingestion service wired to parse and chunk uploaded documents
 
 ## Repository structure
 
@@ -32,4 +37,4 @@ Each commit is scoped to one milestone.
 
 ## Next step
 
-Step 4 will implement backend section-aware PDF parsing and semantic chunking modules.
+Step 5 will store chunks in Qdrant and wire retrieval to answer grounded chat queries.
