@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     openai_api_key: str = ""
     gemini_api_key: str = ""
     qdrant_url: str = "http://qdrant:6333"
+    qdrant_collection: str = "researchmind_chunks"
+    embedding_dimension: int = 384
     database_url: str = "postgresql+psycopg://researchmind:researchmind@postgres:5432/researchmind"
     redis_url: str = "redis://redis:6379/0"
 

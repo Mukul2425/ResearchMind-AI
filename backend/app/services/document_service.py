@@ -5,6 +5,7 @@ from fastapi import UploadFile
 from app.models.document import DocumentChunk
 from app.parsers.pdf_parser import parse_pdf
 from app.rag.chunker import chunk_document
+from app.rag.vector_store import vector_store
 
 
 class DocumentService:
@@ -18,6 +19,7 @@ class DocumentService:
 
         parsed_document = parse_pdf(raw_bytes)
         chunks = chunk_document(document_id=document_id, parsed_document=parsed_document)
+        vector_store.index_chunks(chunks)
 
         self._parsed_by_document[document_id] = parsed_document
         self._chunks_by_document[document_id] = chunks

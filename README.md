@@ -29,10 +29,15 @@ Each commit is scoped to one milestone.
 - Semantic chunking pipeline with overlap and section metadata
 - Ingestion service wired to parse and chunk uploaded documents
 
-### Step 5 (current)
+### Step 5
 - In-memory retrieval over stored chunks
 - Grounded chat responses with citations from processed documents
 - Fallback response when no relevant context is available
+
+### Step 6 (current)
+- Qdrant-backed vector storage for chunk embeddings
+- Similarity search retrieval with local fallback behavior
+- Ingestion pipeline now writes parsed chunks into the vector index
 
 ## Repository structure
 
@@ -42,4 +47,4 @@ Each commit is scoped to one milestone.
 
 ## Next step
 
-Step 6 will store chunks in Qdrant and add true vector search + reranking.
+Step 7 will add reranking and a retrieval evaluation harness.
