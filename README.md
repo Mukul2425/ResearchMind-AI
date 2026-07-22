@@ -39,10 +39,15 @@ Each commit is scoped to one milestone.
 - Similarity search retrieval with local fallback behavior
 - Ingestion pipeline now writes parsed chunks into the vector index
 
-### Step 7 (current)
+### Step 7
 - Retrieval reranking that combines vector similarity and lexical overlap
 - Improved top-k ordering for grounded chat answers
 - Better ranking metadata for future evaluation work
+
+### Step 8 (current)
+- Debug API for inspecting stored documents and chunks
+- Search endpoint for viewing retrieval and reranking results
+- Visibility into parsed document metadata for pipeline debugging
 
 ## Repository structure
 
@@ -52,4 +57,4 @@ Each commit is scoped to one milestone.
 
 ## Next step
 
-Step 8 will add a retrieval evaluation harness and a debugging API for chunk inspection.
+Step 9 will add a retrieval evaluation harness and local metrics for search quality.
