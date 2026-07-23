@@ -49,18 +49,23 @@ Each commit is scoped to one milestone.
 - Search endpoint for viewing retrieval and reranking results
 - Visibility into parsed document metadata for pipeline debugging
 
-### Step 9 (current)
+### Step 9
 - Retrieval evaluation harness with recall-style and MRR metrics
 - JSON-driven local test cases for ranking quality checks
 - CLI output for comparing retrieval performance over time
+
+### Step 10 (current)
+- Docker Compose for backend, frontend, Postgres, Redis, and Qdrant
+- Dockerfiles for backend and frontend services
+- Root env template for local deployment wiring
 
 ## Repository structure
 
 - backend/: FastAPI API and AI pipeline modules
 - backend/app/eval/: Retrieval evaluation harness and sample cases
 - frontend/: Next.js app shell and initial pages
-- docker/: Container configuration (to be added in upcoming steps)
+- docker/: Container configuration and Compose setup
 
 ## Next step
 
-Step 10 will add Docker Compose and local deployment wiring.
+Step 11 will add auth and persistent storage for documents, chunks, and chat history.
