@@ -44,17 +44,23 @@ Each commit is scoped to one milestone.
 - Improved top-k ordering for grounded chat answers
 - Better ranking metadata for future evaluation work
 
-### Step 8 (current)
+### Step 8
 - Debug API for inspecting stored documents and chunks
 - Search endpoint for viewing retrieval and reranking results
 - Visibility into parsed document metadata for pipeline debugging
 
+### Step 9 (current)
+- Retrieval evaluation harness with recall-style and MRR metrics
+- JSON-driven local test cases for ranking quality checks
+- CLI output for comparing retrieval performance over time
+
 ## Repository structure
 
 - backend/: FastAPI API and AI pipeline modules
+- backend/app/eval/: Retrieval evaluation harness and sample cases
 - frontend/: Next.js app shell and initial pages
 - docker/: Container configuration (to be added in upcoming steps)
 
 ## Next step
 
-Step 9 will add a retrieval evaluation harness and local metrics for search quality.
+Step 10 will add Docker Compose and local deployment wiring.

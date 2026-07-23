@@ -1,0 +1,16 @@
+[
+  {
+    "name": "transformer_architecture",
+    "project_id": "all",
+    "query": "Explain transformer architecture",
+    "expected_terms": ["transformer", "attention", "encoder"],
+    "expected_sections": ["Introduction", "Methods", "Background"]
+  },
+  {
+    "name": "results_summary",
+    "project_id": "all",
+    "query": "What are the main results?",
+    "expected_terms": ["results", "accuracy", "performance"],
+    "expected_sections": ["Results", "Experiments", "Discussion"]
+  }
+]

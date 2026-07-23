@@ -5,8 +5,12 @@ import math
 from dataclasses import dataclass
 from typing import Any
 
-from qdrant_client import QdrantClient
-from qdrant_client.http import models as qmodels
+try:
+    from qdrant_client import QdrantClient
+    from qdrant_client.http import models as qmodels
+except ImportError:  # pragma: no cover - optional local dependency
+    QdrantClient = None
+    qmodels = None
 
 from app.models.document import DocumentChunk
 from app.utils.config import settings
@@ -28,6 +32,9 @@ class VectorStore:
         self._ensure_collection()
 
     def _build_client(self) -> QdrantClient | None:
+        if QdrantClient is None:
+            return None
+
         try:
             return QdrantClient(url=settings.qdrant_url)
         except Exception:
@@ -35,6 +42,10 @@ class VectorStore:
 
     def _ensure_collection(self) -> None:
         if self._client is None:
+            return
+
+        if qmodels is None:
+            self._client = None
             return
 
         try:
@@ -71,6 +82,9 @@ class VectorStore:
 
     def index_chunks(self, chunks: list[DocumentChunk]) -> None:
         if not chunks:
+            return
+
+        if qmodels is None:
             return
 
         points: list[qmodels.PointStruct] = []
@@ -110,7 +124,7 @@ class VectorStore:
         if not query_vector:
             return []
 
-        if self._client is not None:
+        if self._client is not None and qmodels is not None:
             try:
                 query_filter = None
                 if document_id and document_id != "all":
